@@ -1,0 +1,109 @@
+[{
+  "file": "D:\\GoogleDrive\\Dokument\\Skola\\GU\\DIT151\\CodeLite\\flipflop_irq\\startup.c",
+  "directory": "D:\\GoogleDrive\\Dokument\\Skola\\GU\\DIT151\\CodeLite\\flipflop_irq",
+  "command": "clang  -c D:\\GoogleDrive\\Dokument\\Skola\\GU\\DIT151\\CodeLite\\flipflop_irq\\startup.c -o D:\\GoogleDrive\\Dokument\\Skola\\GU\\DIT151\\CodeLite\\flipflop_irq\\startup.c.o  -I. -I.  -g  -O0  -w  -mthumb -march=armv6-m  -mfloat-abi=soft  -std=c99"
+ }, {
+  "file": "D:\\GoogleDrive\\Dokument\\Skola\\GU\\DIT151\\CodeLite\\unaligned\\startup.c",
+  "directory": "D:\\GoogleDrive\\Dokument\\Skola\\GU\\DIT151\\CodeLite\\unaligned",
+  "command": "clang  -c D:\\GoogleDrive\\Dokument\\Skola\\GU\\DIT151\\CodeLite\\unaligned\\startup.c -o D:\\GoogleDrive\\Dokument\\Skola\\GU\\DIT151\\CodeLite\\unaligned\\startup.c.o  -I. -I.  -g  -O0  -w  -mthumb -march=armv6-m  -mfloat-abi=soft  -std=c99"
+ }, {
+  "file": "D:\\GoogleDrive\\Dokument\\Skola\\GU\\DIT151\\CodeLite\\flipflop_irq_vectored\\startup.c",
+  "directory": "D:\\GoogleDrive\\Dokument\\Skola\\GU\\DIT151\\CodeLite\\flipflop_irq_vectored",
+  "command": "clang  -c D:\\GoogleDrive\\Dokument\\Skola\\GU\\DIT151\\CodeLite\\flipflop_irq_vectored\\startup.c -o D:\\GoogleDrive\\Dokument\\Skola\\GU\\DIT151\\CodeLite\\flipflop_irq_vectored\\startup.c.o  -I. -I.  -g  -O0  -w  -mthumb -march=armv6-m  -mfloat-abi=soft  -std=c99"
+ }, {
+  "file": "D:\\GoogleDrive\\Dokument\\Skola\\GU\\DIT151\\CodeLite\\systick_irq\\startup.c",
+  "directory": "D:\\GoogleDrive\\Dokument\\Skola\\GU\\DIT151\\CodeLite\\systick_irq",
+  "command": "clang  -c D:\\GoogleDrive\\Dokument\\Skola\\GU\\DIT151\\CodeLite\\systick_irq\\startup.c -o D:\\GoogleDrive\\Dokument\\Skola\\GU\\DIT151\\CodeLite\\systick_irq\\startup.c.o  -DSIMULATOR -I. -I.  -g  -O0  -w  -mthumb -march=armv6-m  -mfloat-abi=soft  -std=c99"
+ }, {
+  "file": "D:\\GoogleDrive\\Dokument\\Skola\\GU\\DIT151\\CodeLite\\systick_irq\\headers\\systick.h",
+  "directory": "D:\\GoogleDrive\\Dokument\\Skola\\GU\\DIT151\\CodeLite\\systick_irq",
+  "command": "clang  -c D:\\GoogleDrive\\Dokument\\Skola\\GU\\DIT151\\CodeLite\\systick_irq\\headers\\systick.h -o D:\\GoogleDrive\\Dokument\\Skola\\GU\\DIT151\\CodeLite\\systick_irq\\headers\\systick.h.o  -DSIMULATOR -I. -I.  -g  -O0  -W"
+ }, {
+  "file": "D:\\GoogleDrive\\Dokument\\Skola\\GU\\DIT151\\CodeLite\\systick_irq\\systick.c",
+  "directory": "D:\\GoogleDrive\\Dokument\\Skola\\GU\\DIT151\\CodeLite\\systick_irq",
+  "command": "clang  -c D:\\GoogleDrive\\Dokument\\Skola\\GU\\DIT151\\CodeLite\\systick_irq\\systick.c -o D:\\GoogleDrive\\Dokument\\Skola\\GU\\DIT151\\CodeLite\\systick_irq\\systick.c.o  -DSIMULATOR -I. -I.  -g  -O0  -w  -mthumb -march=armv6-m  -mfloat-abi=soft  -std=c99"
+ }, {
+  "file": "D:\\GoogleDrive\\Dokument\\Skola\\GU\\DIT151\\CodeLite\\pong\\src\\geometry\\geometry.c",
+  "directory": "D:\\GoogleDrive\\Dokument\\Skola\\GU\\DIT151\\CodeLite\\pong",
+  "command": "clang  -c D:\\GoogleDrive\\Dokument\\Skola\\GU\\DIT151\\CodeLite\\pong\\src\\geometry\\geometry.c -o D:\\GoogleDrive\\Dokument\\Skola\\GU\\DIT151\\CodeLite\\pong\\src\\geometry\\geometry.c.o  -DSIMULATOR -I. -I.  -Wa,-adhln=test.s  -g  -O0  -w  -mthumb -march=armv6-m  -mfloat-abi=soft  -std=c99  -mthumb  -march=armv6-m"
+ }, {
+  "file": "D:\\GoogleDrive\\Dokument\\Skola\\GU\\DIT151\\CodeLite\\pong\\headers\\geometry\\geometry.h",
+  "directory": "D:\\GoogleDrive\\Dokument\\Skola\\GU\\DIT151\\CodeLite\\pong",
+  "command": "clang  -c D:\\GoogleDrive\\Dokument\\Skola\\GU\\DIT151\\CodeLite\\pong\\headers\\geometry\\geometry.h -o D:\\GoogleDrive\\Dokument\\Skola\\GU\\DIT151\\CodeLite\\pong\\headers\\geometry\\geometry.h.o  -DSIMULATOR -I. -I.  -g  -O0  -W"
+ }, {
+  "file": "D:\\GoogleDrive\\Dokument\\Skola\\GU\\DIT151\\CodeLite\\pong\\headers\\geometry\\geometry_line.h",
+  "directory": "D:\\GoogleDrive\\Dokument\\Skola\\GU\\DIT151\\CodeLite\\pong",
+  "command": "clang  -c D:\\GoogleDrive\\Dokument\\Skola\\GU\\DIT151\\CodeLite\\pong\\headers\\geometry\\geometry_line.h -o D:\\GoogleDrive\\Dokument\\Skola\\GU\\DIT151\\CodeLite\\pong\\headers\\geometry\\geometry_line.h.o  -DSIMULATOR -I. -I.  -g  -O0  -W"
+ }, {
+  "file": "D:\\GoogleDrive\\Dokument\\Skola\\GU\\DIT151\\CodeLite\\pong\\headers\\geometry\\geometry_ball.h",
+  "directory": "D:\\GoogleDrive\\Dokument\\Skola\\GU\\DIT151\\CodeLite\\pong",
+  "command": "clang  -c D:\\GoogleDrive\\Dokument\\Skola\\GU\\DIT151\\CodeLite\\pong\\headers\\geometry\\geometry_ball.h -o D:\\GoogleDrive\\Dokument\\Skola\\GU\\DIT151\\CodeLite\\pong\\headers\\geometry\\geometry_ball.h.o  -DSIMULATOR -I. -I.  -g  -O0  -W"
+ }, {
+  "file": "D:\\GoogleDrive\\Dokument\\Skola\\GU\\DIT151\\CodeLite\\pong\\keypad.c",
+  "directory": "D:\\GoogleDrive\\Dokument\\Skola\\GU\\DIT151\\CodeLite\\pong",
+  "command": "clang  -c D:\\GoogleDrive\\Dokument\\Skola\\GU\\DIT151\\CodeLite\\pong\\keypad.c -o D:\\GoogleDrive\\Dokument\\Skola\\GU\\DIT151\\CodeLite\\pong\\keypad.c.o  -DSIMULATOR -I. -I.  -Wa,-adhln=test.s  -g  -O0  -w  -mthumb -march=armv6-m  -mfloat-abi=soft  -std=c99  -mthumb  -march=armv6-m"
+ }, {
+  "file": "D:\\GoogleDrive\\Dokument\\Skola\\GU\\DIT151\\CodeLite\\pong\\delay.c",
+  "directory": "D:\\GoogleDrive\\Dokument\\Skola\\GU\\DIT151\\CodeLite\\pong",
+  "command": "clang  -c D:\\GoogleDrive\\Dokument\\Skola\\GU\\DIT151\\CodeLite\\pong\\delay.c -o D:\\GoogleDrive\\Dokument\\Skola\\GU\\DIT151\\CodeLite\\pong\\delay.c.o  -DSIMULATOR -I. -I.  -Wa,-adhln=test.s  -g  -O0  -w  -mthumb -march=armv6-m  -mfloat-abi=soft  -std=c99  -mthumb  -march=armv6-m"
+ }, {
+  "file": "D:\\GoogleDrive\\Dokument\\Skola\\GU\\DIT151\\CodeLite\\pong\\headers\\graphicdisplay.h",
+  "directory": "D:\\GoogleDrive\\Dokument\\Skola\\GU\\DIT151\\CodeLite\\pong",
+  "command": "clang  -c D:\\GoogleDrive\\Dokument\\Skola\\GU\\DIT151\\CodeLite\\pong\\headers\\graphicdisplay.h -o D:\\GoogleDrive\\Dokument\\Skola\\GU\\DIT151\\CodeLite\\pong\\headers\\graphicdisplay.h.o  -DSIMULATOR -I. -I.  -g  -O0  -W"
+ }, {
+  "file": "D:\\GoogleDrive\\Dokument\\Skola\\GU\\DIT151\\CodeLite\\pong\\headers\\usbdm.h",
+  "directory": "D:\\GoogleDrive\\Dokument\\Skola\\GU\\DIT151\\CodeLite\\pong",
+  "command": "clang  -c D:\\GoogleDrive\\Dokument\\Skola\\GU\\DIT151\\CodeLite\\pong\\headers\\usbdm.h -o D:\\GoogleDrive\\Dokument\\Skola\\GU\\DIT151\\CodeLite\\pong\\headers\\usbdm.h.o  -DSIMULATOR -I. -I.  -g  -O0  -W"
+ }, {
+  "file": "D:\\GoogleDrive\\Dokument\\Skola\\GU\\DIT151\\CodeLite\\pong\\headers\\keypad.h",
+  "directory": "D:\\GoogleDrive\\Dokument\\Skola\\GU\\DIT151\\CodeLite\\pong",
+  "command": "clang  -c D:\\GoogleDrive\\Dokument\\Skola\\GU\\DIT151\\CodeLite\\pong\\headers\\keypad.h -o D:\\GoogleDrive\\Dokument\\Skola\\GU\\DIT151\\CodeLite\\pong\\headers\\keypad.h.o  -DSIMULATOR -I. -I.  -g  -O0  -W"
+ }, {
+  "file": "D:\\GoogleDrive\\Dokument\\Skola\\GU\\DIT151\\CodeLite\\pong\\src\\usbdm.c",
+  "directory": "D:\\GoogleDrive\\Dokument\\Skola\\GU\\DIT151\\CodeLite\\pong",
+  "command": "clang  -c D:\\GoogleDrive\\Dokument\\Skola\\GU\\DIT151\\CodeLite\\pong\\src\\usbdm.c -o D:\\GoogleDrive\\Dokument\\Skola\\GU\\DIT151\\CodeLite\\pong\\src\\usbdm.c.o  -DSIMULATOR -I. -I.  -Wa,-adhln=test.s  -g  -O0  -w  -mthumb -march=armv6-m  -mfloat-abi=soft  -std=c99  -mthumb  -march=armv6-m"
+ }, {
+  "file": "D:\\GoogleDrive\\Dokument\\Skola\\GU\\DIT151\\CodeLite\\pong\\startup.c",
+  "directory": "D:\\GoogleDrive\\Dokument\\Skola\\GU\\DIT151\\CodeLite\\pong",
+  "command": "clang  -c D:\\GoogleDrive\\Dokument\\Skola\\GU\\DIT151\\CodeLite\\pong\\startup.c -o D:\\GoogleDrive\\Dokument\\Skola\\GU\\DIT151\\CodeLite\\pong\\startup.c.o  -DSIMULATOR -I. -I.  -Wa,-adhln=test.s  -g  -O0  -w  -mthumb -march=armv6-m  -mfloat-abi=soft  -std=c99  -mthumb  -march=armv6-m"
+ }, {
+  "file": "D:\\GoogleDrive\\Dokument\\Skola\\GU\\DIT151\\CodeLite\\pong\\headers\\delay.h",
+  "directory": "D:\\GoogleDrive\\Dokument\\Skola\\GU\\DIT151\\CodeLite\\pong",
+  "command": "clang  -c D:\\GoogleDrive\\Dokument\\Skola\\GU\\DIT151\\CodeLite\\pong\\headers\\delay.h -o D:\\GoogleDrive\\Dokument\\Skola\\GU\\DIT151\\CodeLite\\pong\\headers\\delay.h.o  -DSIMULATOR -I. -I.  -g  -O0  -W"
+ }, {
+  "file": "D:\\GoogleDrive\\Dokument\\Skola\\GU\\DIT151\\CodeLite\\pong\\graphicdisplay.c",
+  "directory": "D:\\GoogleDrive\\Dokument\\Skola\\GU\\DIT151\\CodeLite\\pong",
+  "command": "clang  -c D:\\GoogleDrive\\Dokument\\Skola\\GU\\DIT151\\CodeLite\\pong\\graphicdisplay.c -o D:\\GoogleDrive\\Dokument\\Skola\\GU\\DIT151\\CodeLite\\pong\\graphicdisplay.c.o  -DSIMULATOR -I. -I.  -Wa,-adhln=test.s  -g  -O0  -w  -mthumb -march=armv6-m  -mfloat-abi=soft  -std=c99  -mthumb  -march=armv6-m"
+ }, {
+  "file": "D:\\GoogleDrive\\Dokument\\Skola\\GU\\DIT151\\CodeLite\\keypad\\startup.c",
+  "directory": "D:\\GoogleDrive\\Dokument\\Skola\\GU\\DIT151\\CodeLite\\keypad",
+  "command": "clang  -c D:\\GoogleDrive\\Dokument\\Skola\\GU\\DIT151\\CodeLite\\keypad\\startup.c -o D:\\GoogleDrive\\Dokument\\Skola\\GU\\DIT151\\CodeLite\\keypad\\startup.c.o  -I. -I.  -g  -O0  -w  -mthumb -march=armv6-m  -mfloat-abi=soft  -std=c99"
+ }, {
+  "file": "D:\\GoogleDrive\\Dokument\\Skola\\GU\\DIT151\\CodeLite\\basic_io\\startup.c",
+  "directory": "D:\\GoogleDrive\\Dokument\\Skola\\GU\\DIT151\\CodeLite\\basic_io",
+  "command": "clang  -c D:\\GoogleDrive\\Dokument\\Skola\\GU\\DIT151\\CodeLite\\basic_io\\startup.c -o D:\\GoogleDrive\\Dokument\\Skola\\GU\\DIT151\\CodeLite\\basic_io\\startup.c.o  -I. -I.  -g  -O0  -w  -mthumb -march=armv6-m  -mfloat-abi=soft  -std=c99"
+ }, {
+  "file": "D:\\GoogleDrive\\Dokument\\Skola\\GU\\DIT151\\CodeLite\\getsetpsr\\startup.c",
+  "directory": "D:\\GoogleDrive\\Dokument\\Skola\\GU\\DIT151\\CodeLite\\getsetpsr",
+  "command": "clang  -c D:\\GoogleDrive\\Dokument\\Skola\\GU\\DIT151\\CodeLite\\getsetpsr\\startup.c -o D:\\GoogleDrive\\Dokument\\Skola\\GU\\DIT151\\CodeLite\\getsetpsr\\startup.c.o  -I. -I.  -g  -O0  -w  -mthumb -march=armv6-m  -mfloat-abi=soft  -std=c99"
+ }, {
+  "file": "D:\\GoogleDrive\\Dokument\\Skola\\GU\\DIT151\\CodeLite\\delay\\startup.c",
+  "directory": "D:\\GoogleDrive\\Dokument\\Skola\\GU\\DIT151\\CodeLite\\delay",
+  "command": "clang  -c D:\\GoogleDrive\\Dokument\\Skola\\GU\\DIT151\\CodeLite\\delay\\startup.c -o D:\\GoogleDrive\\Dokument\\Skola\\GU\\DIT151\\CodeLite\\delay\\startup.c.o  -DSIMULATOR -I. -I.  -g  -O0  -w  -mthumb -march=armv6-m  -mfloat-abi=soft  -std=c99"
+ }, {
+  "file": "D:\\GoogleDrive\\Dokument\\Skola\\GU\\DIT151\\CodeLite\\flipflop_irq_ack\\startup.c",
+  "directory": "D:\\GoogleDrive\\Dokument\\Skola\\GU\\DIT151\\CodeLite\\flipflop_irq_ack",
+  "command": "clang  -c D:\\GoogleDrive\\Dokument\\Skola\\GU\\DIT151\\CodeLite\\flipflop_irq_ack\\startup.c -o D:\\GoogleDrive\\Dokument\\Skola\\GU\\DIT151\\CodeLite\\flipflop_irq_ack\\startup.c.o  -I. -I.  -g  -O0  -w  -mthumb -march=armv6-m  -mfloat-abi=soft  -std=c99"
+ }, {
+  "file": "D:\\GoogleDrive\\Dokument\\Skola\\GU\\DIT151\\CodeLite\\asciidisplay\\startup.c",
+  "directory": "D:\\GoogleDrive\\Dokument\\Skola\\GU\\DIT151\\CodeLite\\asciidisplay",
+  "command": "clang  -c D:\\GoogleDrive\\Dokument\\Skola\\GU\\DIT151\\CodeLite\\asciidisplay\\startup.c -o D:\\GoogleDrive\\Dokument\\Skola\\GU\\DIT151\\CodeLite\\asciidisplay\\startup.c.o  -DSIMULATOR -I. -I.  -g  -O0  -w  -mthumb -march=armv6-m  -mfloat-abi=soft  -std=c99"
+ }, {
+  "file": "D:\\GoogleDrive\\Dokument\\Skola\\GU\\DIT151\\CodeLite\\autopong\\startup.c",
+  "directory": "D:\\GoogleDrive\\Dokument\\Skola\\GU\\DIT151\\CodeLite\\autopong",
+  "command": "clang  -c D:\\GoogleDrive\\Dokument\\Skola\\GU\\DIT151\\CodeLite\\autopong\\startup.c -o D:\\GoogleDrive\\Dokument\\Skola\\GU\\DIT151\\CodeLite\\autopong\\startup.c.o  -DSIMULATOR -I. -I.  -g  -O0  -w  -mthumb -march=armv6-m  -mfloat-abi=soft  -std=c99"
+ }, {
+  "file": "D:\\GoogleDrive\\Dokument\\Skola\\GU\\DIT151\\CodeLite\\graphicdisplay\\startup.c",
+  "directory": "D:\\GoogleDrive\\Dokument\\Skola\\GU\\DIT151\\CodeLite\\graphicdisplay",
+  "command": "clang  -c D:\\GoogleDrive\\Dokument\\Skola\\GU\\DIT151\\CodeLite\\graphicdisplay\\startup.c -o D:\\GoogleDrive\\Dokument\\Skola\\GU\\DIT151\\CodeLite\\graphicdisplay\\startup.c.o  -DSIMULATOR -I. -I.  -g  -O0  -w  -mthumb -march=armv6-m  -mfloat-abi=soft  -std=c99"
+ }]
