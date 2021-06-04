@@ -65,7 +65,7 @@ void irq_handler(void)
 {
     if((*SCB_ICSR & EXTI3_IRQ_BPOS) != 0)
     {
-        unsigned char flipflop_val = *PORT_E_IDR;
+        unsigned int flipflop_val = *PORT_E_IDR;
         
         *EXTI_PR |= EXTI3_IRQ_BPOS;
         
@@ -99,8 +99,15 @@ void irq_handler(void)
 
 void app_init(void)
 {
-    count = 0xA;
+    count = 0;
     bargraph_val = 0;
+    
+    #ifdef USBDM
+    *((unsigned long *) 0x40023830) = 0x18;
+    __asm volatile("LDR R0,=0x08000209\n BLX R0 \n");
+    *((unsigned long *) 0x40023844) |= 0x4000;
+    *((unsigned long *) 0xE000ED08) = 0x2001C000;
+    #endif
     
     *PORT_D_MODER = 0x55555555;
     *PORT_E_MODER = 0x00005500;
@@ -109,8 +116,8 @@ void app_init(void)
     *SYSCFG_EXTICR1 |= 0x4000;
     
     *EXTI_IMR |= EXTI3_IRQ_BPOS;
-    *EXTI_RTSR |= EXTI3_IRQ_BPOS;
-    *EXTI_FTSR &= ~EXTI3_IRQ_BPOS;
+    *EXTI_FTSR |= EXTI3_IRQ_BPOS;
+    *EXTI_RTSR &= ~EXTI3_IRQ_BPOS;
     
     *SCB_VTOR = INTERRUPT_VECTOR;
     *((void (**) (void)) (INTERRUPT_VECTOR + 0x64)) = irq_handler;

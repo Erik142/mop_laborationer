@@ -1,16 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CodeLite_Project Name="pong" Version="10.0.0" InternalType="User templates">
-  <VirtualDirectory Name="headers">
-    <File Name="headers/usbdm.h"/>
-    <VirtualDirectory Name="geometry">
-      <File Name="headers/geometry/geometry_line.h"/>
-      <File Name="headers/geometry/geometry_ball.h"/>
-      <File Name="headers/geometry/geometry.h"/>
-    </VirtualDirectory>
-    <File Name="headers/graphicdisplay.h"/>
-    <File Name="headers/keypad.h"/>
-    <File Name="headers/delay.h"/>
-  </VirtualDirectory>
   <Plugins>
     <Plugin Name="qmake">
       <![CDATA[00010001N0005Debug000000000000]]>
@@ -31,13 +20,6 @@
   <Description/>
   <Dependencies/>
   <VirtualDirectory Name="src">
-    <File Name="src/usbdm.c"/>
-    <VirtualDirectory Name="geometry">
-      <File Name="src/geometry/geometry.c"/>
-    </VirtualDirectory>
-    <File Name="graphicdisplay.c"/>
-    <File Name="keypad.c"/>
-    <File Name="delay.c"/>
     <File Name="startup.c"/>
   </VirtualDirectory>
   <VirtualDirectory Name="resources">
@@ -56,7 +38,7 @@
     <Configuration Name="Debug" CompilerType="Cross GCC ( arm-none-eabi )" DebuggerType="GNU gdb debugger" Type="Executable" BuildCmpWithGlobalSettings="append" BuildLnkWithGlobalSettings="append" BuildResWithGlobalSettings="append">
       <Compiler Options="-g;-O0;-W" C_Options="-Wa,-adhln=test.s;-g;-O0;-w;-mthumb -march=armv6-m  -mfloat-abi=soft;-std=c99;-mthumb;-march=armv6-m" Assembler="" Required="yes" PreCompiledHeader="" PCHInCommandLine="no" PCHFlags="" PCHFlagsPolicy="0">
         <IncludePath Value="."/>
-        <Preprocessor Value="SIMULATOR"/>
+        <Preprocessor Value="USBDM"/>
       </Compiler>
       <Linker Options="-T$(ProjectPath)/md407-ram.x;-L$(ARM_V6LIB) -L$(ARM_GCC_V6LIB);-nostartfiles" Required="yes">
         <Library Value="gcc"/>

@@ -5,18 +5,18 @@
 ## Debug
 ProjectName            :=flipflop_irq_vectored
 ConfigurationName      :=Debug
-WorkspacePath          :=D:/GoogleDrive/Dokument/Skola/GU/DIT151/CodeLite
-ProjectPath            :=D:/GoogleDrive/Dokument/Skola/GU/DIT151/CodeLite/flipflop_irq_vectored
+WorkspacePath          :="Z:/GU/DIT151 - Maskinorienterad Programmering/CodeLite"
+ProjectPath            :="Z:/GU/DIT151 - Maskinorienterad Programmering/CodeLite/flipflop_irq_vectored"
 IntermediateDirectory  :=./Debug
 OutDir                 := $(IntermediateDirectory)
 CurrentFileName        :=
 CurrentFilePath        :=
 CurrentFileFullPath    :=
-User                   :=EWahl
-Date                   :=25/02/2020
+User                   :=waherik
+Date                   :=28/02/2020
 CodeLitePath           :=C:/cseapp/CodeLite
-LinkerName             :=$(CodeLiteDir)/tools/gcc-arm/bin/arm-none-eabi-g++.exe
-SharedObjectLinkerName :=$(CodeLiteDir)/tools/gcc-arm/arm-none-eabi-g++.exe -shared -fPIC
+LinkerName             :=C:/cseapp/CodeLite/tools/gcc-arm/bin/arm-none-eabi-g++.exe
+SharedObjectLinkerName :="C:/cseapp/CodeLite/tools/gcc-arm/bin/arm-none-eabi-g++.exe" -shared -fPIC
 ObjectSuffix           :=.o
 DependSuffix           :=.o.d
 PreprocessSuffix       :=.i
@@ -28,7 +28,7 @@ LibraryPathSwitch      :=-L
 PreprocessorSwitch     :=-D
 SourceSwitch           :=-c 
 OutputFile             :=$(IntermediateDirectory)/$(ProjectName).elf
-Preprocessors          :=
+Preprocessors          :=$(PreprocessorSwitch)USBDM 
 ObjectSwitch           :=-o 
 ArchiveOutputSwitch    := 
 PreprocessOnlySwitch   :=-E
@@ -49,13 +49,13 @@ LibPath                := $(LibraryPathSwitch).
 ## Common variables
 ## AR, CXX, CC, AS, CXXFLAGS and CFLAGS can be overriden using an environment variables
 ##
-AR       := $(CodeLiteDir)/tools/gcc-arm/bin/arm-none-eabi-ar.exe rcu
-CXX      := $(CodeLiteDir)/tools/gcc-arm/bin/arm-none-eabi-g++.exe
-CC       := $(CodeLiteDir)/tools/gcc-arm/bin/arm-none-eabi-gcc.exe
+AR       := "C:/cseapp/CodeLite/tools/gcc-arm/bin/arm-none-eabi-ar.exe" rcu
+CXX      := C:/cseapp/CodeLite/tools/gcc-arm/bin/arm-none-eabi-g++.exe
+CC       := C:/cseapp/CodeLite/tools/gcc-arm/bin/arm-none-eabi-gcc.exe
 CXXFLAGS :=  -g -O0 -W $(Preprocessors)
 CFLAGS   :=  -g -O0 -w -mthumb -march=armv6-m  -mfloat-abi=soft -std=c99 $(Preprocessors)
 ASFLAGS  := 
-AS       := $(CodeLiteDir)/tools/gcc-arm/bin/arm-none-eabi-as.exe
+AS       := C:/cseapp/CodeLite/tools/gcc-arm/bin/arm-none-eabi-as.exe
 
 
 ##
@@ -106,7 +106,7 @@ PreBuild:
 ## Objects
 ##
 $(IntermediateDirectory)/startup.c$(ObjectSuffix): startup.c $(IntermediateDirectory)/startup.c$(DependSuffix)
-	$(CC) $(SourceSwitch) "D:/GoogleDrive/Dokument/Skola/GU/DIT151/CodeLite/flipflop_irq_vectored/startup.c" $(CFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/startup.c$(ObjectSuffix) $(IncludePath)
+	$(CC) $(SourceSwitch) "Z:/GU/DIT151 - Maskinorienterad Programmering/CodeLite/flipflop_irq_vectored/startup.c" $(CFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/startup.c$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/startup.c$(DependSuffix): startup.c
 	@$(CC) $(CFLAGS) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/startup.c$(ObjectSuffix) -MF$(IntermediateDirectory)/startup.c$(DependSuffix) -MM startup.c
 

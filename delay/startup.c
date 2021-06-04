@@ -2,14 +2,12 @@
  * 	startup.c
  *
  */
- unsigned const long systick_base_addr = 0xE000E010;
- unsigned long *systick_ctrl_addr = ( (unsigned long *) (systick_base_addr + 0x0));
- unsigned long *systick_load_addr = ( (unsigned long *) (systick_base_addr + 0x4));
- unsigned long *systick_val_addr = ( (unsigned long *) (systick_base_addr + 0x8));
+ unsigned long *systick_ctrl_addr = ( (unsigned long *) (0xE000E010 + 0x0));
+ unsigned long *systick_load_addr = ( (unsigned long *) (0xE000E010 + 0x4));
+ unsigned long *systick_val_addr = ( (unsigned long *) (0xE000E010 + 0x8));
  
- unsigned const long gpio_e_base_address = 0x40021000;
- unsigned long *gpio_e_moder = ( (unsigned long *) gpio_e_base_address);
- unsigned short *gpio_e_odr = ( (unsigned short *) (gpio_e_base_address + 0x14));
+ unsigned long *gpio_e_moder = ( (unsigned long *) 0x40021000);
+ unsigned short *gpio_e_odr = ( (unsigned short *) (0x40021000 + 0x14));
  
 __attribute__((naked)) __attribute__((section (".start_section")) )
 void startup ( void )
@@ -72,6 +70,10 @@ void delay_mili(unsigned int ms)
 
 void app_init(void)
 {
+#ifdef USBDM
+    * ( (unsigned long *) 0x40023830) = 0x18; // Starta klockor port D och E
+    __asm__ volatile( " LDR R0,=0x08000209\n BLX R0 \n"); //Initiera PLL
+#endif
     // Set GPIO E Pin 7-0 as output
     *gpio_e_moder = 0x5555;
 }

@@ -13,6 +13,9 @@ __asm__ volatile(".L1: B .L1\n");				/* never return */
 
 void app_init(void)
 {
+    // Initiera klockor port D och E
+    * ( (unsigned long *) 0x40023830) = 0x18;
+    
     * ( (unsigned long *) 0x40020C00) = 0x00005555;
 }
 

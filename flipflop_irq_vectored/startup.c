@@ -113,6 +113,13 @@ void app_init(void)
     count = 0;
     bargraph_val = 0;
     
+    #ifdef USBDM
+    *((unsigned long *) 0x40023830) = 0x18;
+    __asm volatile("LDR R0,=0x08000209\n BLX R0 \n");
+    *((unsigned long *) 0x40023844) |= 0x4000;
+    *((unsigned long *) 0xE000ED08) = 0x2001C000;
+    #endif
+    
     *PORT_D_MODER = 0x55555555;
     *PORT_E_MODER = 0x00005500;
     

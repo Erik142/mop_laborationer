@@ -10,7 +10,7 @@
  
  #define PORT_E_BASE 0x40021000
  
- #define PORT_E_IDR ((unsigned char *) (PORT_E_BASE + 0x10))
+ #define PORT_E_IDR ((unsigned long *) (PORT_E_BASE + 0x10))
  
  #define SYSCFG_BASE 0x40013800
  
@@ -44,7 +44,7 @@ __asm__ volatile(" BL main\n");					/* call main */
 __asm__ volatile(".L1: B .L1\n");				/* never return */
 }
 
-unsigned int count;
+unsigned char count;
 
 void irq_handler(void)
 {
@@ -58,7 +58,14 @@ void irq_handler(void)
 
 void app_init(void)
 {
-    count = 0;
+    count = 2;
+    
+    #ifdef USBDM
+    *((unsigned long *) 0x40023830) = 0x18;
+    __asm volatile("LDR R0,=0x08000209\n BLX R0 \n");
+    *((unsigned long *) 0x40023844) |= 0x4000;
+    *((unsigned long *) 0xE000ED08) = 0x2001C000;
+    #endif
     
     *PORT_D_MODER = 0x5555;
     
@@ -77,13 +84,10 @@ void app_init(void)
 
 void main(void)
 {
-    int flipflop = 0;
-    
     app_init();
     
     while(1)
     {
-        flipflop = *PORT_E_IDR;
         *PORT_D_ODR = count;
     }
 }

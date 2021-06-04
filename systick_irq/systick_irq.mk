@@ -5,18 +5,18 @@
 ## Debug
 ProjectName            :=systick_irq
 ConfigurationName      :=Debug
-WorkspacePath          :=D:/GoogleDrive/Dokument/Skola/GU/DIT151/CodeLite
-ProjectPath            :=D:/GoogleDrive/Dokument/Skola/GU/DIT151/CodeLite/systick_irq
+WorkspacePath          :="Z:/GU/DIT151 - Maskinorienterad Programmering/CodeLite"
+ProjectPath            :="Z:/GU/DIT151 - Maskinorienterad Programmering/CodeLite/systick_irq"
 IntermediateDirectory  :=./Debug
 OutDir                 := $(IntermediateDirectory)
 CurrentFileName        :=
 CurrentFilePath        :=
 CurrentFileFullPath    :=
-User                   :=EWahl
-Date                   :=23/02/2020
+User                   :=waherik
+Date                   :=28/02/2020
 CodeLitePath           :=C:/cseapp/CodeLite
-LinkerName             :=$(CodeLiteDir)/tools/gcc-arm/bin/arm-none-eabi-g++.exe
-SharedObjectLinkerName :=$(CodeLiteDir)/tools/gcc-arm/arm-none-eabi-g++.exe -shared -fPIC
+LinkerName             :=C:/cseapp/CodeLite/tools/gcc-arm/bin/arm-none-eabi-g++.exe
+SharedObjectLinkerName :="C:/cseapp/CodeLite/tools/gcc-arm/bin/arm-none-eabi-g++.exe" -shared -fPIC
 ObjectSuffix           :=.o
 DependSuffix           :=.o.d
 PreprocessSuffix       :=.i
@@ -28,7 +28,7 @@ LibraryPathSwitch      :=-L
 PreprocessorSwitch     :=-D
 SourceSwitch           :=-c 
 OutputFile             :=$(IntermediateDirectory)/$(ProjectName).elf
-Preprocessors          :=$(PreprocessorSwitch)SIMULATOR 
+Preprocessors          :=$(PreprocessorSwitch)USBDM 
 ObjectSwitch           :=-o 
 ArchiveOutputSwitch    := 
 PreprocessOnlySwitch   :=-E
@@ -49,13 +49,13 @@ LibPath                := $(LibraryPathSwitch).
 ## Common variables
 ## AR, CXX, CC, AS, CXXFLAGS and CFLAGS can be overriden using an environment variables
 ##
-AR       := $(CodeLiteDir)/tools/gcc-arm/bin/arm-none-eabi-ar.exe rcu
-CXX      := $(CodeLiteDir)/tools/gcc-arm/bin/arm-none-eabi-g++.exe
-CC       := $(CodeLiteDir)/tools/gcc-arm/bin/arm-none-eabi-gcc.exe
+AR       := "C:/cseapp/CodeLite/tools/gcc-arm/bin/arm-none-eabi-ar.exe" rcu
+CXX      := C:/cseapp/CodeLite/tools/gcc-arm/bin/arm-none-eabi-g++.exe
+CC       := C:/cseapp/CodeLite/tools/gcc-arm/bin/arm-none-eabi-gcc.exe
 CXXFLAGS :=  -g -O0 -W $(Preprocessors)
 CFLAGS   :=  -g -O0 -w -mthumb -march=armv6-m  -mfloat-abi=soft -std=c99 $(Preprocessors)
 ASFLAGS  := 
-AS       := $(CodeLiteDir)/tools/gcc-arm/bin/arm-none-eabi-as.exe
+AS       := C:/cseapp/CodeLite/tools/gcc-arm/bin/arm-none-eabi-as.exe
 
 
 ##
@@ -106,7 +106,7 @@ PreBuild:
 ## Objects
 ##
 $(IntermediateDirectory)/startup.c$(ObjectSuffix): startup.c $(IntermediateDirectory)/startup.c$(DependSuffix)
-	$(CC) $(SourceSwitch) "D:/GoogleDrive/Dokument/Skola/GU/DIT151/CodeLite/systick_irq/startup.c" $(CFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/startup.c$(ObjectSuffix) $(IncludePath)
+	$(CC) $(SourceSwitch) "Z:/GU/DIT151 - Maskinorienterad Programmering/CodeLite/systick_irq/startup.c" $(CFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/startup.c$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/startup.c$(DependSuffix): startup.c
 	@$(CC) $(CFLAGS) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/startup.c$(ObjectSuffix) -MF$(IntermediateDirectory)/startup.c$(DependSuffix) -MM startup.c
 
@@ -114,7 +114,7 @@ $(IntermediateDirectory)/startup.c$(PreprocessSuffix): startup.c
 	$(CC) $(CFLAGS) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/startup.c$(PreprocessSuffix) startup.c
 
 $(IntermediateDirectory)/systick.c$(ObjectSuffix): systick.c $(IntermediateDirectory)/systick.c$(DependSuffix)
-	$(CC) $(SourceSwitch) "D:/GoogleDrive/Dokument/Skola/GU/DIT151/CodeLite/systick_irq/systick.c" $(CFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/systick.c$(ObjectSuffix) $(IncludePath)
+	$(CC) $(SourceSwitch) "Z:/GU/DIT151 - Maskinorienterad Programmering/CodeLite/systick_irq/systick.c" $(CFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/systick.c$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/systick.c$(DependSuffix): systick.c
 	@$(CC) $(CFLAGS) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/systick.c$(ObjectSuffix) -MF$(IntermediateDirectory)/systick.c$(DependSuffix) -MM systick.c
 

@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CodeLite_Project Name="systick_irq" Version="10.0.0" InternalType="User templates">
-  <VirtualDirectory Name="headers">
-    <File Name="headers/systick.h"/>
-  </VirtualDirectory>
   <Plugins>
     <Plugin Name="qmake">
       <![CDATA[00010001N0005Debug000000000000]]>
@@ -20,6 +17,9 @@
  }]]]>
     </Plugin>
   </Plugins>
+  <VirtualDirectory Name="headers">
+    <File Name="headers/systick.h"/>
+  </VirtualDirectory>
   <Description/>
   <Dependencies/>
   <VirtualDirectory Name="src">
@@ -42,7 +42,7 @@
     <Configuration Name="Debug" CompilerType="Cross GCC ( arm-none-eabi )" DebuggerType="GNU gdb debugger" Type="Executable" BuildCmpWithGlobalSettings="append" BuildLnkWithGlobalSettings="append" BuildResWithGlobalSettings="append">
       <Compiler Options="-g;-O0;-W" C_Options="-g;-O0;-w;-mthumb -march=armv6-m  -mfloat-abi=soft;-std=c99" Assembler="" Required="yes" PreCompiledHeader="" PCHInCommandLine="no" PCHFlags="" PCHFlagsPolicy="0">
         <IncludePath Value="."/>
-        <Preprocessor Value="SIMULATOR"/>
+        <Preprocessor Value="USBDM"/>
       </Compiler>
       <Linker Options="-T$(ProjectPath)/md407-ram.x;-L$(ARM_V6LIB) -L$(ARM_GCC_V6LIB);-nostartfiles" Required="yes">
         <Library Value="gcc"/>

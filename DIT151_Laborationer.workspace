@@ -6,13 +6,12 @@
   <Project Name="asciidisplay" Path="asciidisplay/asciidisplay.project" Active="No"/>
   <Project Name="graphicdisplay" Path="graphicdisplay/graphicdisplay.project" Active="No"/>
   <Project Name="autopong" Path="autopong/autopong.project" Active="No"/>
-  <Project Name="pong" Path="pong/pong.project" Active="No"/>
+  <Project Name="pong" Path="pong/pong.project" Active="Yes"/>
   <Project Name="getsetpsr" Path="getsetpsr/getsetpsr.project" Active="No"/>
   <Project Name="systick_irq" Path="systick_irq/systick_irq.project" Active="No"/>
-  <Project Name="unaligned" Path="unaligned/unaligned.project" Active="No"/>
   <Project Name="flipflop_irq" Path="flipflop_irq/flipflop_irq.project" Active="No"/>
   <Project Name="flipflop_irq_ack" Path="flipflop_irq_ack/flipflop_irq_ack.project" Active="No"/>
-  <Project Name="flipflop_irq_vectored" Path="flipflop_irq_vectored/flipflop_irq_vectored.project" Active="Yes"/>
+  <Project Name="flipflop_irq_vectored" Path="flipflop_irq_vectored/flipflop_irq_vectored.project" Active="No"/>
   <BuildMatrix>
     <WorkspaceConfiguration Name="Debug" Selected="yes">
       <Environment/>

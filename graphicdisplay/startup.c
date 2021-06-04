@@ -157,14 +157,18 @@ void graphic_wait_ready(void)
     
     delay_500ns();
     
+    unsigned char busy;
+    
     do
     {
         graphic_ctrl_bit_set(B_E);
         delay_500ns();
         
+        busy = *GRAPHIC_DATA_IDR & LCD_BUSY;
+        
         graphic_ctrl_bit_clear(B_E);
         delay_500ns();
-    } while( (*GRAPHIC_DATA_IDR & LCD_BUSY) != 0);
+    } while(busy != 0);
     
     graphic_ctrl_bit_set(B_E);
     
@@ -267,8 +271,8 @@ uint8_t graphic_read_data(uint8_t controller)
 
 void graphic_initialize(void)
 {
-    graphic_ctrl_bit_clear(B_SELECT);
-    delay_mikro(10);
+    //graphic_ctrl_bit_clear(B_SELECT);
+    //delay_mikro(10);
     
     graphic_ctrl_bit_set(B_E);
     delay_mikro(10);
@@ -377,7 +381,11 @@ void pixel(unsigned x, unsigned y, unsigned set)
 
 void app_init(void)
 {    
-    * ( (unsigned long *) portModer) = 0x55555555;
+    #ifdef USBDM
+    *((unsigned long *) 0x40023830) = 0x18;
+    __asm volatile ("LDR R0,=0x08000209\n BLX R0 \n");
+    #endif
+    *((unsigned long *) portModer) = 0x55555555;
 }
 
 void main(void)

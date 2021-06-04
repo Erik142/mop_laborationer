@@ -19,10 +19,9 @@
  #define B_RW 0x02
  #define B_RS 0x01
  
- unsigned const long systick_base_addr = 0xE000E010;
- unsigned long *systick_ctrl_addr = ( (unsigned long *) (systick_base_addr + 0x0));
- unsigned long *systick_load_addr = ( (unsigned long *) (systick_base_addr + 0x4));
- unsigned long *systick_val_addr = ( (unsigned long *) (systick_base_addr + 0x8));
+ unsigned long *systick_ctrl_addr = ( (unsigned long *) (0xE000E010 + 0x0));
+ unsigned long *systick_load_addr = ( (unsigned long *) (0xE000E010 + 0x4));
+ unsigned long *systick_val_addr = ( (unsigned long *) (0xE000E010 + 0x8));
  
  typedef struct ascii_reg
  {
@@ -94,8 +93,6 @@ void delay_mili(unsigned int ms)
 void ascii_ctrl_bit_set(unsigned char x)
 {
     *ascii_ctrl_reg.out = (*ascii_ctrl_reg.out & ~x) | x;
-    
-    char val = *ascii_ctrl_reg.out;
 }
 
 void ascii_ctrl_bit_clear(unsigned char x)
@@ -222,6 +219,11 @@ void ascii_gotoxy(int x, int y)
 
 void app_init(void)
 {
+#ifdef USBDM
+    * ( (unsigned long *) 0x40023830) = 0x18; // Starta klockor port D och E
+    __asm__ volatile( " LDR R0,=0x08000209\n BLX R0 \n"); //Initiera PLL
+#endif
+    
     ascii_ctrl_reg.in = ( (unsigned char *) portIdrLow);
     ascii_ctrl_reg.out = ( (unsigned char *) portOdrLow);
     
@@ -234,7 +236,7 @@ void app_init(void)
 void main(void)
 {
     char *s;
-    char test1[] = "Alfanumerisk ";
+    char test1[] = "Hej ";
     char test2[] = "Display - test";
     
     app_init();

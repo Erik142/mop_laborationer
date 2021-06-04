@@ -5,19 +5,23 @@
 #define SYSTICK_INTERRUPT_HANDLER ((void (**) (void)) (INTERRUPT_BASE_ADDRESS + 0x3C))
 #define SCB_VTOR ((unsigned volatile int *) 0xE000ED08)
 
-#define SYSTICK_TICKS 0xA9  // Antal klockcykler för att fördröja 1 us
+#define SYSTICK_TICKS 0xA7  // Antal klockcykler för att fördröja 1 us
 
 #define SYSTICK_BASE_ADDRESS 0xE000E010
 #define SYSTICK_CTRL ((unsigned long *) SYSTICK_BASE_ADDRESS)
 #define SYSTICK_LOAD ((unsigned long *) (SYSTICK_BASE_ADDRESS + 0x4))
+#define SYSTICK_VAL ((unsigned long *) (SYSTICK_BASE_ADDRESS + 0x8))
 
 unsigned int global_count;
+
 
 void delay_1mikro(void)
 {
     systick_flag = 0;
     
     *SYSTICK_CTRL = 0;
+    
+    *SYSTICK_VAL = 0;
     
     *SYSTICK_LOAD = SYSTICK_TICKS;
     
@@ -52,3 +56,4 @@ void delay(int us)
     global_count = us;
     delay_1mikro();
 }
+
